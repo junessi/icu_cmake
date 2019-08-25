@@ -657,7 +657,7 @@ int gTestFilterClassID = 0;
  * Used by TestFiltering().
  */
 class TestFilter : public UnicodeFilter {
-    virtual UnicodeFunctor* clone() const {
+    virtual TestFilter* clone() const {
         return new TestFilter(*this);
     }
     virtual UBool contains(UChar32 c) const {
@@ -1947,7 +1947,7 @@ class TestTrans : public Transliterator {
 public:
     TestTrans(const UnicodeString& id) : Transliterator(id, 0) {
     }
-    virtual Transliterator* clone(void) const {
+    virtual TestTrans* clone(void) const {
         return new TestTrans(getID());
     }
     virtual void handleTransliterate(Replaceable& /*text*/, UTransPosition& offsets,
