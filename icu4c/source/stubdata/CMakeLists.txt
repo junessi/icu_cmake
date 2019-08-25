@@ -1,0 +1,2 @@
+file(GLOB SRC_FILES stubdata.cpp)
+set(STUBDATA_SRC ${SRC_FILES} PARENT_SCOPE)
