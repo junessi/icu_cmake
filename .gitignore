@@ -1,6 +1,7 @@
 # Global ignores
 __pycache__/
 *.pyc
+*.o
 
 # Specific file name ignores
 /.git

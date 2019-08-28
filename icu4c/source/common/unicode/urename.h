@@ -42,11 +42,13 @@
  */
 
 #ifndef U_ICU_ENTRY_POINT_RENAME
+broken
 #include "unicode/umachine.h"
 #endif
 
 /* If we still don't have U_ICU_ENTRY_POINT_RENAME use the default. */
 #ifndef U_ICU_ENTRY_POINT_RENAME
+broken
 #include "unicode/uvernum.h"
 #endif
 
