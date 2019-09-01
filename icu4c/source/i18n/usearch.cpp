@@ -3544,7 +3544,12 @@ const CEI *CEIBuffer::get(int32_t index) {
     //   Verify that it is the next one in sequence, which is all
     //   that is allowed.
     if (index != limitIx) {
-        UPRV_UNREACHABLE;
+        U_ASSERT(FALSE);
+        // TODO: In ICU 64 the above assert was changed to use UPRV_UNREACHABLE instead
+        // which unconditionally calls abort(). However, there were cases where this was
+        // being hit. This change is reverted for now, restoring the existing behavior.
+        // ICU-20792 tracks the follow-up work/further investigation on this.
+        return NULL;
     }
 
     // Manage the circular CE buffer indexing
@@ -3581,7 +3586,12 @@ const CEI *CEIBuffer::getPrevious(int32_t index) {
     //   Verify that it is the next one in sequence, which is all
     //   that is allowed.
     if (index != limitIx) {
-        UPRV_UNREACHABLE;
+        U_ASSERT(FALSE);
+        // TODO: In ICU 64 the above assert was changed to use UPRV_UNREACHABLE instead
+        // which unconditionally calls abort(). However, there were cases where this was
+        // being hit. This change is reverted for now, restoring the existing behavior.
+        // ICU-20792 tracks the follow-up work/further investigation on this.
+        return NULL;
     }
 
     // Manage the circular CE buffer indexing
