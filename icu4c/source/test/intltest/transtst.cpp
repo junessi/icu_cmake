@@ -4558,10 +4558,6 @@ void TransliteratorTest::TestHalfwidthFullwidth(void) {
         delete fh;
         return;
     }
-    else
-    {
-        printf("================================> HF and FH instances created.\n");
-    }
 
     // Array of 2n items
     // Each item is
