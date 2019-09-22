@@ -1,0 +1,37 @@
+featureFilters: {
+  translit: include
+  brkitr_dictionaries: exclude
+  brkitr_rules: exclude
+  brkitr_tree: exclude
+  cnvalias: exclude
+  coll_tree: exclude
+  coll_ucadata: exclude
+  confusables: exclude
+  conversion_mappings: exclude
+  curr_supplemental: exclude
+  curr_tree: exclude
+  lang_tree: exclude
+  locales_tree: exclude
+  misc: exclude
+  normalization: exclude
+  rbnf_tree: exclude
+  region_tree: exclude
+  stringprep: exclude
+  ulayout: exclude
+  unames: exclude
+  unit_tree: exclude
+  zone_tree: exclude
+}
+
+resourceFilters: [
+    {
+        categories: [
+            translit
+        ]
+        rules: [
+            -/RuleBasedTransliteratorIDs/*
+            +/RuleBasedTransliteratorIDs/Fullwidth-Halfwidth
+            +/RuleBasedTransliteratorIDs/Halfwidth-Fullwidth
+        ]
+    }
+]
